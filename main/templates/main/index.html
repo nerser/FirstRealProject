@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block title %} Home - {{ block.super }} {% endblock title %}
+
+
+{% block slider %}
+<div class="slider">
+  <div class="slider__content">
+    <img class="slider__img" src="{% static 'images/jojo_slider.png' %}" alt="">
+    <img class="slider__img" src="{% static 'images/one-piece.png' %}" alt="">
+    <img class="slider__img" src="{% static 'images/jojo_slider.png' %}" alt="">
+  </div>
+</div>
+{% endblock slider %}
+
+
+{% block content %}
+
+<section class="main__info">
+  <div class="container">
+    <p class="work__info">
+      Разработка, производство и послепродажное обслуживание авиационной техники военного, специального и гражданского
+      назначения с приоритетом потребностей государственных заказчиков.
+    </p>
+    <p class="work__motto">
+      РАБОТА НЕ ВОЛК – В ЛЕС НЕ УБЕЖИТ
+    </p>
+  </div>
+</section>
+
+<section class="posts__cards">
+  <div class="cards__column">
+    <div class="card">
+      <div class="card__inner-tag">
+        <div class="tag" style="  background-color: #C7A222;">
+          <p>Сенсация!!!</p>
+        </div>
+        <div class="tag" style="  background-color: red;" ;>
+          <p>Деду не понять</p>
+        </div>
+      </div>
+      <div class="card__inner-img">
+        <a href="#"><img class="card__img" src="{% static 'images/jojocard.png' %}" alt=""></a>
+      </div>
+      <div class="card__inner">
+        <h1 class="card__title">
+          Влад досмотрел ЖоЖо
+        </h1>
+        <div class="card__text">
+          <p class="card__inner-text">На днях случилось невозможное. Влад наконецто досмотрел жожо...</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card__inner-tag">
+        <div class="tag" style="  background-color: #1CCAD6;">
+          <p>Games</p>
+        </div>
+        <div class="tag" style="  background-color: gray" ;>
+          <p>Grind</p>
+        </div>
+      </div>
+      <div class="card__inner-img">
+        <a href="#"><img class="card__img" src="{% static 'images/card.png' %}" alt=""></a>
+      </div>
+      <div class="card__inner">
+        <h1 class="card__title">
+          Жека загриндил перса
+        </h1>
+        <div class="card__text">
+          <p class="card__inner-text">Спустя n-е количество времени Жека смог таки открыть нового перса. О нем читайте
+            далее...</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card__inner-tag">
+        <div class="tag" style="  background-color: #1CCAD6;">
+          <p>Games</p>
+        </div>
+        <div class="tag" style="  background-color: #90481F" ;>
+          <p>Леха-Машина</p>
+        </div>
+      </div>
+      <div class="card__inner-img">
+        <a href="#"><img class="card__img" src="{% static 'images/drift.png' %}" alt=""></a>
+      </div>
+      <div class="card__inner">
+        <h1 class="card__title">
+          Леха начал дрифтить
+        </h1>
+        <div class="card__text">
+          <p class="card__inner-text">Правда не на ланосе, а в форзе. На фото его первый успешный дрифт. Читать
+            далее....</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock content %}

@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{% block title %} ОКБ ЖМА {% endblock title %}</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/slick.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/jquery.fancybox.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__menu"> 
+      <div class="logo">
+        <img class="logo__img" src="{% static 'images/logo.png' %}" alt="Логотип">
+      </div>
+
+      <nav class="menu">
+
+        <ul class="menu__list">
+
+          <li class="menu__list-item">
+            <a href="{% url 'home' %}" class="menu__list-link">Главная</a>
+          </li>
+          <li class="menu__list-item">
+            <a href="#" class="menu__list-link">Продукция</a>
+          </li>
+          <li class="menu__list-item dropdown">
+              <a href="{% url 'main_about' %}" class="dropdown__btn">О нас</a>
+              <div class="dropdown__content">
+                <a href="#">История КБ</a>
+                <a href="#">Наши Сотрудники</a>
+                <a href="#">Новости КБ</a>
+              </div>
+            </li>
+          </li>
+          <li class="menu__list-item">
+            <a href="#" class="menu__list-link">Галерея</a>
+          </li>
+          <li class="menu__list-item">
+            <a href="#" class="menu__list-link">Контакты</a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <div class="button__signin">
+        <a href="#" class="button__signin-link">Войти</a>
+      </div>
+    </div>
+    
+    {% block slider %}
+    {% endblock slider %}
+
+  </header>
+
+  
+  {% block content %}
+  {% endblock content %}
+    
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__inner">
+        Copyright &copy; 2020 ОКБ ЖМA
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="{% static 'js/slick.min.js' %}"></script>
+  <script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>
